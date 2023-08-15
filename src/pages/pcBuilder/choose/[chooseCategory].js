@@ -26,7 +26,7 @@ export default ChooseCategory;
 export const getServerSideProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/api/v1/pc-part/category/${params.chooseCategory}`
+    `https://pc-builder-server-lovat.vercel.app/api/v1/pc-part/category/${params.chooseCategory}`
   );
   const data = await res.json();
   return {

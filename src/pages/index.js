@@ -45,7 +45,9 @@ const HomePage = ({ data }) => {
 export default HomePage;
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/pc-part");
+  const res = await fetch(
+    "https://pc-builder-server-lovat.vercel.app/api/v1/pc-part"
+  );
   const data = await res.json();
   return {
     props: {
